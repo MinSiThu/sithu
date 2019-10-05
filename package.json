@@ -1,0 +1,28 @@
+{
+  "name": "sithu",
+  "version": "1.0.0",
+  "description": "leave next and nuxt; use back-to-the-future",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MinSiThu/back-to-the-future.git"
+  },
+  "keywords": [
+    "ssr",
+    "server-side-rendering",
+    "app"
+  ],
+  "author": "min si thu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MinSiThu/back-to-the-future/issues"
+  },
+  "homepage": "https://github.com/MinSiThu/back-to-the-future#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^2.0.4"
+  }
+}
