@@ -23,6 +23,7 @@
   "homepage": "https://github.com/MinSiThu/back-to-the-future#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "flightjs": "^1.5.2",
     "pug": "^2.0.4"
   }
 }
