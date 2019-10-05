@@ -1,6 +1,6 @@
 {
   "name": "sithu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "leave next and nuxt; use back-to-the-future",
   "main": "index.js",
   "scripts": {
