@@ -5,7 +5,7 @@ app.use(express.static("static"));
 app.set("view engine","pug");
 app.set("views","pages");
 
-let ConfigBinder = require("./ConfigBinder");
+let RouteBinder = require("./RouteBinder");
 module.exports = class{
     constructor(){
         this.app = app;
@@ -15,9 +15,9 @@ module.exports = class{
         this.app.listen(PORT,cb);
     }
 
-    setServer(configs){
-        configs.forEach(config => {
-            ConfigBinder.bindConfig(this.app,config);
+    setRoutes(routes){
+        routes.forEach(route => {
+            RouteBinder.bindRoute(this.app,route);
         });
     }
 }

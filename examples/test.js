@@ -1,7 +1,7 @@
 let sithuServer = require("../index");
-let config = require("./config");
+let routes = require("./routes");
 
-sithuServer.setServer(config);
+sithuServer.setRoutes(routes);
 sithuServer.listen(3000,function(){
     console.log(`Server is working`);
 })

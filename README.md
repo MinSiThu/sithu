@@ -22,16 +22,16 @@ After installing, build your project structure.
     /index.pug
 /static
 server.js
-config.js
+routes.js
 package.json
 ```
 
 In **server.js**
 ```js
 let sithuServer = require("sithu");
-let config = require("./config");
+let routes = require("./routes");
 
-sithuServer.setServer(config);
+sithuServer.setRoutes(routes);
 sithuServer.listen(4200,function(){
     console.log(`Server is working`);
 })
@@ -50,7 +50,7 @@ module.exports = function(context){
 }
 ```
 
-In **config.js**
+In **routes.js**
 ```js
 let IndexInterceptor = require("./interceptors/index");
 
