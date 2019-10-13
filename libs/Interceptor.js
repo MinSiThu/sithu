@@ -1,5 +1,7 @@
+let response;
+
 module.exports = class{
-    constructor(fn){
-        this.fn = fn
+    constructor(fn,response){
+        this.fn = fn.bind(this);
     }
 }

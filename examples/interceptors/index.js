@@ -1,4 +1,4 @@
-module.exports = function(context){    
-    let data = {name:'SiThu Server'}
-    return data;
+module.exports = function(context,res,next){
+    //res.redirect("/4")
+    next();
 }
