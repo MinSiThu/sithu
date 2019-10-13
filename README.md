@@ -44,9 +44,9 @@ h1 Hello World from #{name}
 
 In **interceptors/index.js**
 ```js
-module.exports = function(context){    
+module.exports = function(context,response,next){    
     let data = {name:'SiThu Server'}
-    return data;
+    next(data);
 }
 ```
 
