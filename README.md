@@ -15,7 +15,7 @@ npm install --save sithu
 
 - [Sample Tutorial](#Sample-Tutorial)
 - [Api Documentation](#Api-Documentation)
-  - [server (class:Server)](#Server:class)
+  - [server (class:Server)](#Server-class)
     1. [setRoutes(routes)](#setRoutes(routes))
     2. [listen(port,callback[options])](#listen(port,callback[options]))
     3. [setViewEngine(engineName)](#setViewEngine(engineName))
@@ -82,7 +82,7 @@ Open **localhost:4200**
 ****
 ## Api-Documentation
 
-### **Server:class**
+### **Server-class**
 
 ### setRoutes(routes)
 **setRoutes** is method for setting server routes.
