@@ -1,7 +1,10 @@
 let util = require("util");
 
 module.exports = class{
-    constructor({url,view,interceptor=()=>{}}){
+    constructor({
+            url,view,
+            interceptor=(context,response,next)=>{ next() }
+    }){
         this.url = url;
         this.view = view;
         if(util.isFunction(interceptor) == true){
