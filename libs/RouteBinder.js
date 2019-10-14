@@ -1,6 +1,7 @@
 let Route = require("./Route");
 let Context = require("./Context");
 let Interceptor = require("./Interceptor");
+let path = require("path");
 
 module.exports = class{
     static async bindRoute(app,routeConfig){
@@ -11,10 +12,18 @@ module.exports = class{
             let context = new Context(req);
             let interceptor = new Interceptor(route.interceptor);
 
-            await interceptor.fn(context,res,function(data){
-                res.status(202).render(route.view,data);
-            });
-            
+            try{
+                await interceptor.fn(context,res,function(data){
+                    res.status(202).render(route.view,data);
+                });    
+            }catch(e){
+                if(app.get("deploy") == true){
+                    res.status(500).sendFile(path.join(__dirname,"views","500.html"));
+                }else{
+                    res.status(500).send(e);
+                }
+            }
+           
         })
     
     }
