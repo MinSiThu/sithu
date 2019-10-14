@@ -13,6 +13,10 @@ module.exports = class{
         this.deployStatus = false;
     }
 
+    setViewEngine(engine){
+        app.set("view engine",engine);
+    }
+
     deploy(){
         this.deployStatus = true;
         this.$app.set("deploy",true);
