@@ -1,0 +1,7 @@
+extends ../template/layout
+
+block content
+    h1 Hello World from Sithu Server
+    each item in data
+        h4 #{item.title}
+        p #{item.body}

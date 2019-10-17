@@ -21,6 +21,7 @@ npm install --save sithu
     3. [setViewEngine(engineName)](#setViewEngine(engineName))
     4. [deploy()](#deploy())
   - [Interceptor](#Interceptor)
+  - [Fetching](#Fetching)
 
 ## Sample-Tutorial
 After installing, build your project structure.
@@ -133,6 +134,22 @@ module.exports = function(context,response,next){
 
 }
 ```
+
+### **Fetching**
+Fetching can be used in interceptors. These are powerful part of sithu framework and makes it UI server.
+```js
+// in interceptor
+let fetcher = require("sithu/fetcher");
+
+module.exports = async(cotext,response,next)=>{
+    let ajaxRes = await fetcher("https://jsonplaceholder.typicode.com/posts");
+    let data = await ajaxRes.json();
+    next({
+        data
+    })
+}
+```
+Fetcher library of sithu is based on isomorphic-unfetch library.
 
 ***
 ### If you found this repository useful, star this repository for appreciating and supporting our framework.
