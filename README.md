@@ -1,5 +1,5 @@
 # Sithu (Server Side Rendering)
- leave next and nuxt
+ Fast and Simple SSR framework
 
 ```
 npm install --save sithu
@@ -12,6 +12,8 @@ npm install --save sithu
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/MinSiThu/sithu/blob/master/LICENSE)
 
 [![GitHub contributors](https://img.shields.io/github/contributors/Naereen/StrapDown.js.svg)](https://github.com/MinSiThu/sithu/graphs/contributors)
+
+## Since version 1.1.5, compression mode and cache features are built-in. And infinity sockets mode is default.
 
 - [Sample Tutorial](#Sample-Tutorial)
 - [Api Documentation](#Api-Documentation)

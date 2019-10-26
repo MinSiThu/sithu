@@ -8,7 +8,7 @@ let compression = require("compression");
 //speed up middleware
 app.use(compression());
 
-app.use(express.static("static"));
+app.use(express.static("static",{ maxAge: 31557600 }));
 app.set("view engine","pug");
 app.set("views","pages");
 
