@@ -1,6 +1,12 @@
 let express = require("express");
+var http = require('http');
+http.globalAgent.maxSockets = Infinity;
 let app = express();
 let path = require("path");
+let compression = require("compression");
+
+//speed up middleware
+app.use(compression());
 
 app.use(express.static("static"));
 app.set("view engine","pug");

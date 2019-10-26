@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/MinSiThu/back-to-the-future#readme",
   "dependencies": {
+    "compression": "^1.7.4",
     "express": "^4.17.1",
     "flightjs": "^1.5.2",
     "isomorphic-unfetch": "^3.0.0",
