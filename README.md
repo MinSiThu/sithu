@@ -1,5 +1,5 @@
 # Sithu (Server Side Rendering)
- Fast and Simple SSR framework
+## Simple, Fast and Secure
 
 ```
 npm install --save sithu
@@ -13,7 +13,9 @@ npm install --save sithu
 
 [![GitHub contributors](https://img.shields.io/github/contributors/Naereen/StrapDown.js.svg)](https://github.com/MinSiThu/sithu/graphs/contributors)
 
-## Since version 1.1.5, compression mode and cache features are built-in. And infinity sockets mode is default.
+# Special Announcements
+
+Since version 1.1.5, compression mode and cache features are built-in. And infinity sockets mode is default. HSTS with 60 days is supported by default. **Build Secure and High Speed**
 
 - [Sample Tutorial](#Sample-Tutorial)
 - [Api Documentation](#Api-Documentation)

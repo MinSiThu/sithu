@@ -4,8 +4,13 @@ http.globalAgent.maxSockets = Infinity;
 let app = express();
 let path = require("path");
 let compression = require("compression");
+let helmet = require("helmet");
 
 //speed up middleware
+const sixtyDaysInSeconds = 5184000
+app.use(helmet.hsts({
+  maxAge: sixtyDaysInSeconds
+}))
 app.use(compression());
 
 app.use(express.static("static",{ maxAge: 31557600 }));
