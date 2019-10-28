@@ -19,6 +19,7 @@ Since version 1.1.5, compression mode and cache features are built-in. And infin
 
 - [Sample Tutorial](#Sample-Tutorial)
 - [Api Documentation](#Api-Documentation)
+  - [**Server Builder**](#ServerBuilder)
   - [server (class:Server)](#Server-class)
     1. [setRoutes(routes)](#setRoutes(routes))
     2. [listen(port,callback[options])](#listen(port,callback[options]))
@@ -42,11 +43,18 @@ package.json
 
 In **server.js**
 ```js
-let sithuServer = require("sithu");
+let Sithu = require("sithu");
 let routes = require("./routes");
 
+let sithuServer = Sithu({
+    hsts:false, //default is false
+    cache:false, // default is false
+    compressionMode:true // default is false
+})
+
 sithuServer.setRoutes(routes);
-sithuServer.listen(4200,function(){
+sithuServer.deploy();
+sithuServer.listen(3000,function(){
     console.log(`Server is working`);
 })
 ```
@@ -86,6 +94,17 @@ Open **localhost:4200**
 
 ****
 ## Api-Documentation
+
+### **ServerBuilderr**
+```
+let Sithu = require("sithu");
+let sithuServer = Sithu(options)
+```
+Options can be
+#### hsts, default is true
+#### cache, default is false,
+#### compressionMode, default is false,
+#### view_engine, default is "pug"
 
 ### **Server-class**
 

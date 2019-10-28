@@ -7,18 +7,34 @@ let compression = require("compression");
 let helmet = require("helmet");
 
 //speed up middleware
-const sixtyDaysInSeconds = 5184000
-app.use(helmet.hsts({
-  maxAge: sixtyDaysInSeconds
-}))
-app.use(compression());
 
-app.use(express.static("static",{ maxAge: 31557600 }));
-app.set("view engine","pug");
-app.set("views","pages");
+
+module.exports.pre = ({hsts=false,cache=false,compressionMode=false,view_engine="pug"})=>{
+
+    if(hsts == true){
+        const sixtyDaysInSeconds = 5184000
+        app.use(helmet.hsts({
+            maxAge: sixtyDaysInSeconds
+        }))
+    }
+
+    if(compressionMode == true){
+        app.use(compression());
+    }
+    
+    if(cache == true){
+        app.use(express.static("static",{ maxAge: 31557600 }));
+    }else{
+        app.use(express.static("static"));
+    }
+
+
+    app.set("view engine",view_engine);
+    app.set("views","pages");
+}
 
 let RouteBinder = require("./RouteBinder");
-module.exports = class{
+module.exports.Server = class{
     constructor(){
         this.$app = app;
         this.deployStatus = false;

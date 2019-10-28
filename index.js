@@ -1,6 +1,7 @@
-let Server = require("./libs/Server");
+let ServerSingeleton = require("./libs/Server");
 let fetch = require("isomorphic-unfetch");
 
-let server = new Server();
-
-module.exports = server;
+module.exports = function(options){
+    ServerSingeleton.pre(options);
+    return new ServerSingeleton.Server();
+}
