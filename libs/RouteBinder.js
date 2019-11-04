@@ -2,6 +2,7 @@ let Route = require("./Route");
 let Context = require("./Context");
 let Interceptor = require("./Interceptor");
 let path = require("path");
+let Logger = require("./Logger");
 
 module.exports = class{
     static async bindRoute(app,routeConfig){
@@ -18,6 +19,10 @@ module.exports = class{
                 });    
             }catch(e){
                 if(app.get("deploy") == true){
+                    
+                    if(app.get("logFile") == true){
+                        Logger.error(e.toString());
+                    } //add log file
                     res.status(500).sendFile(path.join(__dirname,"views","500.html"));
                 }else{
                     res.status(500).send(e);

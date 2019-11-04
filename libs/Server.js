@@ -44,6 +44,10 @@ module.exports.Server = class{
         app.set("view engine",engine);
     }
 
+    addLogger(){
+        this.$app.set("logFile",true);
+    }
+
     deploy(){
         this.deployStatus = true;
         this.$app.set("deploy",true);

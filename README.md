@@ -24,7 +24,8 @@ Since version 1.1.5, compression mode and cache features are built-in. And infin
     1. [setRoutes(routes)](#setRoutes(routes))
     2. [listen(port,callback[options])](#listen(port,callback[options]))
     3. [setViewEngine(engineName)](#setViewEngine(engineName))
-    4. [deploy()](#deploy())
+    4. [addLogger()](#addLogger())
+    5. [deploy()](#deploy())
   - [Interceptor](#Interceptor)
   - [Fetching](#Fetching)
 
@@ -135,6 +136,14 @@ npm install ejs
 ```js
 server.setViewEngine("ejs");
 ```
+
+### addLogger()
+**addLogger** is a method for setting log files in your app. This is a good-to-have feature in production mode.
+```js
+server.addLogger(); //call method before deploy
+server.deploy();
+```
+In your working directory, *server.log* file is automatically created. 
 
 ### deploy()
 If the server is ready to deploy, this method should be called. 

@@ -8,6 +8,7 @@ let sithuServer = Sithu({
 })
 
 sithuServer.setRoutes(routes);
+sithuServer.addLogger();
 sithuServer.deploy();
 sithuServer.listen(3000,function(){
     console.log(`Server is working`);
