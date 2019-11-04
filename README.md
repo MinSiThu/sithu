@@ -96,7 +96,7 @@ Open **localhost:4200**
 ****
 ## Api-Documentation
 
-### **ServerBuilderr**
+### **ServerBuilder**
 ```
 let Sithu = require("sithu");
 let sithuServer = Sithu(options)
