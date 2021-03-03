@@ -27,7 +27,7 @@
     "flightjs": "^1.5.2",
     "helmet": "^3.21.2",
     "isomorphic-unfetch": "^3.0.0",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "winston": "^3.2.1"
   }
 }
